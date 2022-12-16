@@ -76,6 +76,7 @@ import NewExpense from './Components/Expenses/NewExpense/NewExpense.js';
  
 
                                             //  OR
+                        // (USING useState instead of State and this.setState)
 
 
 const App =()=>{
@@ -114,8 +115,10 @@ const App =()=>{
  //  here adding the expense data from user to the existing array
         //  const expenses_new=[expen,...expenses];
         //  setExpenses(expenses_new);
+        
 
                   //  OR
+           // (USING prevState)
 
 
           //  This is the most correct way as we are using the previous state

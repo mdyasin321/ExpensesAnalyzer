@@ -1,0 +1,15 @@
+.filterControl{
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.filterControl label{
+    font-size: 1.7rem;
+}
+.filterControl select{
+    padding: 1rem;
+    border-radius: 16px;
+    font-size: 1rem;
+}

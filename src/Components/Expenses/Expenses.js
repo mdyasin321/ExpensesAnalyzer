@@ -93,10 +93,17 @@ const Expenses =(props)=>{
                                 return element;
                          }
                 
-        })      
+        })   
+        
+        let expenseItemArray=[]
+
+        if(filteredExpense.length===0){
+                expenseItemArray=<p style={{color:'white'}}>No items present</p>
+        }
         
         
-        const expenseItemArray=filteredExpense.map((element)=>{
+        else{ 
+                expenseItemArray = filteredExpense.map((element)=>{
 
                 return (
                                        <ExpenseItem
@@ -107,6 +114,8 @@ const Expenses =(props)=>{
                                         ></ExpenseItem>
                 )         
         })
+
+}
 
 
     return (

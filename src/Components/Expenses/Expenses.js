@@ -98,7 +98,7 @@ const Expenses =(props)=>{
         let expenseItemArray=[]
 
         if(filteredExpense.length===0){
-                expenseItemArray=<p style={{color:'white'}}>No items present</p>
+                expenseItemArray=<p style={{color:'white' ,textAlign:'center',fontSize:'1.5rem'} }>No items present</p>
         }
         
         
@@ -121,6 +121,7 @@ const Expenses =(props)=>{
     return (
         <div className='expenses'>
                 <ExpenseFilter yearSelected={filteredState} yearFilter={yearFilterHandler}></ExpenseFilter>
+                <ExpenseChart itemsArray={filteredExpense}></ExpenseChart>
                 {expenseItemArray}
        
 

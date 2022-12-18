@@ -1,0 +1,16 @@
+/* .expenses-chart{
+    background-color: cornsilk;
+    border-radius: 10px;
+    margin-top: 25px;
+} */
+
+.chart {
+    padding: 1rem;
+    margin-top: 1.25rem;
+    border-radius: 12px;
+    background-color: #f8dfff;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    height: 10rem;
+  }

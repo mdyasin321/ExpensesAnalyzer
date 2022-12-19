@@ -45,9 +45,12 @@ const ExpenseForm =(props)=>{
 
     const expenseData={
         title:enterdTitle,
-        amount:enterdAmount,
+        amount:+enterdAmount,
+        // here I have added "+" in front of enteredAmount to convert the amount from string to number
         date: new Date(enterdDate)
     }
+
+    console.log(+enterdAmount+'------')
 
     props.onSaveExpenseData(expenseData)
 

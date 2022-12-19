@@ -15,6 +15,9 @@ const ExpenseItem =(props)=>{
                 {/* <div className='expense-item-price'>
                     <h2>{props.price}</h2>
                 </div> */}
+                <button onClick={()=>{
+                    props.removeItem(props.key)
+                }}>Delete</button>
                 <ExpensePrice price={props.price}></ExpensePrice>
             </div>
 

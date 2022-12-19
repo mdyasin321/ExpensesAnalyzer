@@ -138,6 +138,22 @@ const App =()=>{
 
 
   }
+
+
+   const deleteExpenseHandler=(id)=>{
+
+    const expenseIndex=expenses.findIndex((element)=>{
+      return (
+        element.id===id
+      )
+    })
+
+    const newExpen=[...expenses];
+    newExpen.splice(expenseIndex,1);
+
+    setExpenses(newExpen);
+
+   }
   
 
     console.log(expenses)
@@ -147,7 +163,7 @@ const App =()=>{
         <h1>Lets get started</h1>
         
         <NewExpense expenseHandler={addExpenseHandler} ></NewExpense>
-        <Expenses  items={expenses}></Expenses>
+        <Expenses  items={expenses}  delete={deleteExpenseHandler}></Expenses>
         
       </div>
 

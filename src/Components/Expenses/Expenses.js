@@ -112,6 +112,7 @@ const Expenses =(props)=>{
                                         title={element.title}
                                         date={element.date}
                                         price={element.amount}
+                                        removeItem={props.delete}
                                         ></ExpenseItem>
                 )         
         })

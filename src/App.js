@@ -147,6 +147,7 @@ const App =()=>{
         element.id===id
       )
     })
+    console.log(expenseIndex+' index')
 
     const newExpen=[...expenses];
     newExpen.splice(expenseIndex,1);

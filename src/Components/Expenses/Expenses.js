@@ -109,6 +109,7 @@ const Expenses =(props)=>{
                 return (
                                        <ExpenseItem
                                          key={element.id}
+                                         id={element.id}
                                         title={element.title}
                                         date={element.date}
                                         price={element.amount}

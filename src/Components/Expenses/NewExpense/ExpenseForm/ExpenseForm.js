@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
+import ErrorModalAndBackdrop from './ErrorModalAndBackdrop/ErrorModalAndBackdrop';
 import './ExpenseForm.css';
 
 const ExpenseForm =(props)=>{
     const [enterdTitle,setEnteredTitle]=useState("")
     const [enterdAmount,setEnteredAmount]=useState("")
     const [enterdDate,setEnteredDate]=useState("")
+
+    const [error,setError]=useState()
 
 
   const titleChangeHandler=(event)=>{
@@ -34,6 +37,10 @@ const ExpenseForm =(props)=>{
     // console.log(enterdTitle);
    }
 
+   const errorHandler=()=>{
+    setError();
+   }
+
 
 
 
@@ -42,6 +49,23 @@ const ExpenseForm =(props)=>{
 
     event.preventDefault();
     //  This method has been added to prevent the webpage to get reloaded
+
+    if(enterdTitle.trim().length===0){
+        setError({
+            title:'invalid',
+            message:'enter valid title'
+        })
+        return;
+    }
+
+    if(+enterdAmount<1 ||  enterdAmount.trim().length===0){
+
+        setError({
+            title:'invalid',
+            message:'enter valid amount'
+        })
+        return;
+    }
 
     const expenseData={
         title:enterdTitle,
@@ -65,6 +89,8 @@ const ExpenseForm =(props)=>{
 
 
     return (
+    <div>
+     {error &&   <ErrorModalAndBackdrop  title={error.title}  message={error.message}  click={errorHandler}></ErrorModalAndBackdrop>   }
     <form  onSubmit={submitHandler}>
         <div className='new-expense__controls'>
             <div className='new-expense__control'>
@@ -93,6 +119,7 @@ const ExpenseForm =(props)=>{
             </div>
         </div>
     </form>
+    </div>
     )
 }
 

@@ -91,6 +91,8 @@ const ExpenseForm =(props)=>{
     return (
     <div>
      {error &&   <ErrorModalAndBackdrop  title={error.title}  message={error.message}  click={errorHandler}></ErrorModalAndBackdrop>   }
+      {/* here we can use '&&' expression as a alternative of if and else conditon */}
+     {/* here if error is not null then show the ErrorModalAndBackdrop, otherwise if error is null,then skip ErrorModalAndBackdrop */}
     <form  onSubmit={submitHandler}>
         <div className='new-expense__controls'>
             <div className='new-expense__control'>

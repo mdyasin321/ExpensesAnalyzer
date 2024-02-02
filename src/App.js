@@ -108,9 +108,7 @@ const App =()=>{
 
 
         const addExpenseHandler=(expen)=>{
-         console.log('in app js');
-         console.log(expen);
-
+   
 
  //  here adding the expense data from user to the existing array
         //  const expenses_new=[expen,...expenses];
@@ -134,7 +132,7 @@ const App =()=>{
       
 
        
-
+                  console.log("app.jsfile 137    ")
 
 
   }
@@ -162,7 +160,7 @@ const App =()=>{
       <div className='app'>
         <div className='background'></div>
         <h1>Lets get started</h1>
-        
+        {console.log('rendering started')}
         <NewExpense expenseHandler={addExpenseHandler} ></NewExpense>
         <Expenses  items={expenses}  delete={deleteExpenseHandler}></Expenses>
         

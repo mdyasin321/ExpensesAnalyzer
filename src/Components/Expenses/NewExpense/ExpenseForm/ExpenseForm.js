@@ -27,6 +27,8 @@ const ExpenseForm =(props)=>{
     // console.log(enterdTitle);
    }
 
+   
+
 
 
 
@@ -75,11 +77,16 @@ const ExpenseForm =(props)=>{
     }
 
     console.log(+enterdAmount+'------')
-
+  
+    console.log("form.jsfile 79 ")
     props.onSaveExpenseData(expenseData)
-
+    console.log("form.jsfile 81 ")
+   
+    console.log("form.jsfile 83  title  ")
     setEnteredTitle('');
+    console.log("form.jsfile 85  amount  ")
     setEnteredAmount('');
+    console.log("form.jsfile 87  date  ")
     setEnteredDate('');
 
     
@@ -92,7 +99,9 @@ const ExpenseForm =(props)=>{
     <div>
      {error &&   <ErrorModalAndBackdrop  title={error.title}  message={error.message}  click={errorHandler}></ErrorModalAndBackdrop>   }
       {/* here we can use '&&' expression as a alternative of if and else conditon */}
+     
      {/* here if error is not null then show the ErrorModalAndBackdrop, otherwise if error is null,then skip ErrorModalAndBackdrop */}
+      {console.log("rendering in form")}
     <form  onSubmit={submitHandler}>
         <div className='new-expense__controls'>
             <div className='new-expense__control'>
